@@ -11,7 +11,7 @@ function hasUnusedRules(st) {
 }
 
 function hasUnusedVariables(st) {
-    if (st.indexOf('<') > -1) {
+    if (st.indexOf('[') > -1) {
         return true;
     }
 
@@ -43,8 +43,8 @@ function generate(grammar, story) {
     }
 
     while (hasUnusedVariables(story)) {
-        const start = story.indexOf('<');
-        const end = story.indexOf('>');
+        const start = story.indexOf('[');
+        const end = story.indexOf(']');
         const variableName = story.slice(start + 1, end);
 
         let variable = variables[variableName];

@@ -22,13 +22,13 @@ const grammar = {
     rules: {
         story: "{introduction} {middle} {end}",
         introduction: "{atfirst} {describe}",
-        atfirst: "Once upon a time, there was a hero named <names.protagonist>. ",
+        atfirst: "Once upon a time, there was a hero named [names.protagonist]. ",
         describe: [
-            "<names.protagonist> was a <adjectives.protagonistadjective> fighter. ",
-            "<names.protagonist> was a <adjectives.protagonistadjective> warrior. ",
+            "[names.protagonist] was a [adjectives.protagonistadjective] fighter. ",
+            "[names.protagonist] was a [adjectives.protagonistadjective] warrior. ",
         ],
-        middle: "Then <names.protagonist> went for a <adjectives.protagonistadjective> walk. ",
-        end: "And <names.protagonist> had a nice walk. ",
+        middle: "Then [names.protagonist] went for a [adjectives.protagonistadjective] walk. ",
+        end: "And [names.protagonist] had a nice walk. ",
     },
 };
 
