@@ -1,0 +1,27 @@
+{
+  "name": "story-grammar",
+  "version": "1.0.0",
+  "description": "A grammar for generating stories",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scotchfield/story-grammar-js.git"
+  },
+  "keywords": [
+    "story",
+    "grammar"
+  ],
+  "author": "scotchfield",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scotchfield/story-grammar-js/issues"
+  },
+  "homepage": "https://github.com/scotchfield/story-grammar-js#readme",
+  "devDependencies": {
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9"
+  }
+}

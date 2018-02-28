@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Story Grammar Sample</title>
+<style type="text/css">
+svg {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<div id="content"></div>
+
+<script src="../build/story-grammar.js"></script>
+<script type="text/javascript">
+const grammar = {
+    lists: {
+        names: ['Scott', 'Laura'],
+        adjectives: ['good', 'new', 'big', 'small', 'important'],
+        objects: ['acorn', 'apple', 'bag', 'balloon', 'baseball'],
+    },
+    rules: {
+        story: "{introduction} {middle} {end}",
+        introduction: "{atfirst} {describe}",
+        atfirst: "Once upon a time, there was a hero named <names.protagonist>. ",
+        describe: [
+            "<names.protagonist> was a <adjectives.protagonistadjective> fighter. ",
+            "<names.protagonist> was a <adjectives.protagonistadjective> warrior. ",
+        ],
+        middle: "Then <names.protagonist> went for a <adjectives.protagonistadjective> walk. ",
+        end: "And <names.protagonist> had a nice walk. ",
+    },
+};
+
+const story = storyGrammar.generate(grammar, "{story}");
+document.getElementById('content').innerHTML = story.story;
+</script>
+
+</body>
+</html>
